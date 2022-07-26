@@ -1,0 +1,9 @@
+스태틱 매쉬 생성
+UStaticMeshComponent* StaticMesh;
+
+생성자에서
+
+StaticMesh = DefaultSubobject()함수를 쓴다
+템플릿이라 StaticMesh의 type을 적어줘야함
+
+StaticMesh = DefaultSubobject<UStaticMeshComponent>(TEXT("스태틱매쉬 이름"))
