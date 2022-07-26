@@ -1,0 +1,21 @@
+액터
+SetActorLocation(x, y, z) float형태로
+
+게임 시작시 위치를 정함
+
+
+Super::BeginPlay();
+// 게임 시작시 초기 스폰위치
+FVector InitialLocation = FVector(0.0f, 0.0f, 0.0f);
+
+// SetActorLocation은 초기위치 치정
+SetActorLocation(InitialLocation);
+
+이런식으로도 사용 가능
+
+
+// 월드상에 처음 배치된 위치
+FVector PlacedLocation
+
+// GetActorLocation은 현재 위치 받아옴
+PlacedLocation = GetActorLocation();
