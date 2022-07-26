@@ -1,0 +1,11 @@
+언리얼 엔진 함수
+
+Begin Play()
+생성될 때 한번 실행됨
+
+Tick() 매초 실행됨
+
+AddActorWorldOffset()
+액터의 위치를 계속 지정한만큼 더해줌
+Fvector기반
+
