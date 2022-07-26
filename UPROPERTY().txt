@@ -1,0 +1,9 @@
+UPROPERTY()매크로
+Edit은 수정 가능
+Visible은 보기가능
+
+InstanceOnly 월드상에 배치된 오브젝트의 디테일 패널에서 값을 
+
+DefaultsOnly 블루프린트 에디터 창의 디테일 패널에서 값을 
+
+Anywhere 블루프린트 에디터, 월드상에 배치된 오브젝트의 디테일 패널에서 값을
