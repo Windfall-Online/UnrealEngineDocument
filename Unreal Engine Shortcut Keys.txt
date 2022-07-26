@@ -1,0 +1,3 @@
+언리얼 단축키
+F = World Outliner에서 액터를 하나 선택하고 하면 Zoom
+end = Mesh를 바닥으로 내려 꽂기
