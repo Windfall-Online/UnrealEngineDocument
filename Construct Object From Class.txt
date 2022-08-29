@@ -1,14 +1,11 @@
 객체 생성
-Construct Object From Class
-SampleActor_BP가 순수 BP였는데
-MyObject클래스를 하나 생성해서
-SampleActor_BP에 MyObject클래스의 내용을 담을 수 있음
+C++파생 블루프린트는 인스턴스가 없으니
+기존 블루프린트에 합체해서 객체를 만듬
 
+input은 부모
+output으로 자식 같은?
 
-Construct Object From Class
-input으로 줄 내용고르고
-output으로 넣을 블루프린트 선택
-
-(강의에서는 Object타입을 Actor타입에 넣긴함)
-Actor타입에 씌운걸 리턴받아서 
-MyObjectVar이란 타입에 Set하고 MyObjectVar안에있는 My Function 호출
+MyObject_BP를
+MyActor에 합체시키려면
+input은 MyActor
+output은 MyObject_BP이렇게해서 객체 생성
