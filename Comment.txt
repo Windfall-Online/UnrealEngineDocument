@@ -46,7 +46,7 @@ UCLASS()로 마킹을 해놓으면
 Garbage Collect이 됨
 
 variable은 UPROPERTY() macro로 마킹해야하고
-Function은 UFUNCTION() macor으로 마킹해야함
+Function은 UFUNCTION() macro으로 마킹해야함
 
 
 C++ class를 블루프린트로 만들 수 있게 하기
@@ -54,3 +54,7 @@ UCLASS(Blueprintable)
 
 로그 찍기
 UE_LOG(LogTemp, 로그 종류(Warning등), TEXT("로그 내용"));
+
+C++클래스를 추가할때 폴더를 만들고 그 안에 넣었는데 리빌드 오류 혹은 컴파일이 안 될때
+cpp파일에 가서 folder/source.h에서
+folder/ 의경로를 지우고 헤더만 인클루드하기
