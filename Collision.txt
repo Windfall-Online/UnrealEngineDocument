@@ -1,0 +1,43 @@
+콜리전 종류
+simple collision
+complex collision
+
+complex collision은 매쉬모양 그대로
+근데 이게 엔진에 부담을 줘서 게임을 느리게 만들어
+simple collision을 추가해 대충 간단하게 만듬
+
+매쉬 더블클릭후 진입 Collision탭을 클릭 Add Box Simplified Collision 클릭
+박스형 콜리전이 나옴
+박스클릭하면 수정가능 위치, 회전, 스케일
+
+Remove Collision을 클릭하면 지워짐
+다양한 콜리전 옵션이 있음
+
+10dop
+18dop 같은건 알고리즘으로 모양을 측정 후 만들어줌
+
+블루프린트로 들어가서 Simulate Physics를 체크하면 충돌이 만들어짐 현실세계의 물리적 현상이나옴
+
+
+
+
+
+블루프린트에서 AddForce함수
+BeginPlay와 연결
+Target = Static Mesh
+
+Force가 힘을 강제로 가함
+x방향에 숫자를 크게주면 x방향으로 밀려남 힘을 x방향으로 추가?
+
+게임을 시작하고
+`눌러서 커맨드라인을 열고 show Collision을 치면 콜리전이 뷰포트에서 다 보임
+
+디테일 패널에서 Enable Gravity를 체크해제하면 중력 날아감
+
+detail 패널에서 collision presets에서 custom 선택 여러가지 변경 가능
+
+벽을 선택하고 custom 설정에서 WorldDynamic을 overlap으로 설정하면
+위의 sweep값이 true여도 뚫고지나감
+
+icosphere 의 설정을 custom에서 worldStatic을 무시로 설정하면 벽 뚫음
+벽이 worldstatic이기 때문
