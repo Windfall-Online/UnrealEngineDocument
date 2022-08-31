@@ -1,0 +1,3 @@
+Pitch Y축잡고 돌리기
+Yaw Z축잡고 돌리기
+Roll X축잡고 돌리기
