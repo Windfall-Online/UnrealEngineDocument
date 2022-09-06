@@ -1,0 +1,68 @@
+Deltatime을 이용할 거임
+
+private:
+float RunningTime을 만들어줌
+
+bShouldFloat안에서
+RunnintTime += DeltaTime;
+sin함수에 넣어주면 sin함수는 -1과 1을 올라갔다 내려감 위아래로 움직일수 있게함
+
+FVector NewLocation = GetActorLocation();
+
+NewLocation.Z = NewLocation.Z + FMath::Sin(RunningTime);
+
+SetActorLocation(NewLocation);
+RunningTime += DeltaTime;
+
+이렇게해줌
+
+private:
+float BaseZLocation추가
+
+BeginPlay에서 PlacedLocation.Z넣기
+
+FVector NewLocation = GetActorLocation();
+
+NewLocation.Z = BaseZLocation + FMath::Sin(RunningTime);
+
+SetActorLocation(NewLocation);
+RunningTime += DeltaTime;
+
+
+
+언리얼 엔진에서1은 너무 작기때문에 1000을 곱하는방법
+
+FVector NewLocation = GetActorLocation();
+
+NewLocation.Z = BaseZLocation + (1000.f) * FMath::Sin(RunningTime);
+
+SetActorLocation(NewLocation);
+RunningTime += DeltaTime;
+
+아래 변수 추가
+public:
+	// Amplitude
+	UPROPERTY(EDitAnywhere, BlueprintReadOnly, Category = "Floater Variables")
+	float A;
+
+	// Period
+	UPROPERTY(EDitAnywhere, BlueprintReadOnly, Category = "Floater Variables")
+	float B;
+
+	// Phase Shift
+	UPROPERTY(EDitAnywhere, BlueprintReadOnly, Category = "Floater Variables")
+	float C;
+
+	// Vertical Shift
+	UPROPERTY(EDitAnywhere, BlueprintReadOnly, Category = "Floater Variables")
+	float D;
+	
+
+
+FVector NewLocation = GetActorLocation();
+
+NewLocation.Z = BaseZLocation + A * FMath::Sin(B * RunningTime - C) + D;
+
+SetActorLocation(NewLocation);
+RunningTime += DeltaTime;
+이렇게 해준다
