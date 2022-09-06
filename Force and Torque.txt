@@ -1,0 +1,16 @@
+Begin Play에
+FVector InitialForce = FVector(20000.f, 0.0f, 0.0f);추가
+
+StaticMesh안에 ->로 접근해야하는데 헤더파일을 추가해야함
+staticmeshcomponent.h 솔루션 탐색기에 치면 나옴
+경로를 알아내서 헤더 추가
+
+StaticMesh->AddForce(InitialForce);
+
+힘들 가해줌
+
+
+StaticMesh->AddTorqueInRadians(InitialTorque);
+토크는 회전력을 가해줌
+
+
