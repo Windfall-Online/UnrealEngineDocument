@@ -19,7 +19,7 @@ Remove Collision을 클릭하면 지워짐
 블루프린트로 들어가서 Simulate Physics를 체크하면 충돌이 만들어짐 현실세계의 물리적 현상이나옴
 
 
-
+Sweep은 콜리전이없어도 true로하면 충돌을 구현해줌 기본값은 false
 
 
 블루프린트에서 AddForce함수
