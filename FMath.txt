@@ -1,0 +1,23 @@
+FMath::로 수학함수 접근하기 
+
+
+Floater::BeginPlay()
+float InitialX = FMath::FRand();
+
+FRand()는 0과 1사이의 수를 리턴함
+
+
+	InitialLocation.X = InitialX;
+	InitialLocation.Y = InitialY;
+	InitialLocation.Z = InitialZ;
+
+이렇게 값넣기
+InitialLocation *= 500.f;
+이렇게 20곱해주기
+
+이렇게하면 InitialLocation이 값이 계속 바뀜
+그러나 에디터에서는 안바뀌는데
+Initialize Floater Location을 BP에가서 체크해야함
+이러면 랜덤스폰이 생김
+
+FRandRange()는 범위를 지정해서 할 수 있음
