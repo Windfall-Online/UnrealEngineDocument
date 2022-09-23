@@ -1,0 +1,45 @@
+Pawn 타입 Critter 생성
+CPP에 #include "Components/StaticMeshComponent.h" 추가
+
+#include "Camera/CameraComponent.h"추가
+
+
+UPROPERTY(EditAnywhere, Category = "Mesh")
+UStaticMeshComponent* MeshComponent;
+
+생성자
+RootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("RootComponent"));
+MeshComponent = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("MeshComponent"));
+
+폰은 RootComponent를 기본적으로 들고있다
+USceneComponent타입임
+
+MeshComponent->SetupAttachment()
+뭘 붙일때 씀
+MeshComponent->SetupAttachment(GetRootComponent());
+MeshComponent를 루트 컴포넌트에 붙임
+
+UPROPERTY(EditAnywhere, Category = "Camera")
+class UCameraComponent* Camera;
+카메라 생성
+
+Camera = CreateDefaultSubobject<UCameraComponent>(TEXT("Camera"));
+Camera->SetupAttachment(GetRootComponent());
+
+카메라를 루트 컴포넌트에 붙이기
+
+Camera->SetRelativeLocation(FVector(-300.f, 0.f, 300.f));
+Camera->SetRelativeRotation(FRotator(-45.f, 0.f, 0.f));
+카메라 조정
+
+카메라가 기본게임모드라 바꿔줘야함
+기본 게임모드의 블루프린트를 만들어주자
+블루프린트 안에서 DefaultPawnClass를 Critter로 바꿔주자
+
+Critter 생성자에서
+AutoPossessPlayer = EAutoReceiveInput::Player0;이렇게
+Player0는 첫번째 플레이어임 
+
+그다음 월드 세팅의 GameModeOverride
+를 BP_CritterGameMove로 바꿔주면 끝
+
